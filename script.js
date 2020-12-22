@@ -2,6 +2,8 @@ var express=require("express")
 var app=express()
 var fs=require("fs")
 var path=require("path")
+require("dotenv").config()
+const port=process.env.port||3000
 
 app.set("view engine","ejs")
 
@@ -39,7 +41,7 @@ app.get("/drive",async (req,res)=>{
         }
         res.render("index",{files:list_ele,data:data})
     })
-}).listen(3000,(err)=>{
+}).listen(port,(err)=>{
     if(err){
         throw err
     }else{
