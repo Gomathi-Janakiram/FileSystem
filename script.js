@@ -3,7 +3,7 @@ var app=express()
 var fs=require("fs")
 var path=require("path")
 require("dotenv").config()
-const port=process.env.port||3000
+const port=process.env.PORT||3000
 
 app.set("view engine","ejs")
 
