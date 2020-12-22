@@ -9,6 +9,10 @@ app.set("view engine","ejs")
 
 var list_ele=[]
 var images=[]
+
+app.get("/",async(req,res)=>{
+    res.send("welcome")
+})
 app.get("/drive",async (req,res)=>{
     fs.opendir("C:/Users/HP/Documents/assignment",async (err,data)=>{
         if(err){
