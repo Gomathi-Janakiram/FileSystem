@@ -15,7 +15,7 @@ app.get("/", async (req, res) => {
 })
 
 app.get("/drive", async (req, res) => {
-    fs.opendir("C:/Users/HP/Documents/assignment", async (err, data) => {
+    fs.opendir("C:/Users/HP/Documents/assignment","utf8", async (err, data) => {
         try {
             if (err) {
                 throw err
